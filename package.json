@@ -2,17 +2,17 @@
   "name": "@seadub/danger-plugin-eslint",
   "description": "Eslint your code with Danger",
   "author": {
-    "name": "Dan Palmer",
-    "email": "dan@danpalmer.me"
+    "name": "Chris Williams",
+    "email": "chris.a.williams@gmail.com"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/danpalmer/danger-plugin-eslint.git"
+    "url": "https://github.com/sgtcoolguy/danger-plugin-eslint.git"
   },
   "bugs": {
-    "url": "https://github.com/danpalmer/danger-plugin-eslint/issues"
+    "url": "https://github.com/sgtcoolguy/danger-plugin-eslint/issues"
   },
-  "homepage": "https://github.com/danpalmer/danger-plugin-eslint#readme",
+  "homepage": "https://github.com/sgtcoolguy/danger-plugin-eslint#readme",
   "keywords": [
     "danger",
     "danger-plugin",
