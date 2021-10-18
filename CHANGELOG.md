@@ -1,3 +1,13 @@
+# [3.0.0](https://github.com/sgtcoolguy/danger-plugin-eslint/compare/v2.0.0...v3.0.0) (2021-10-18)
+
+
+* feat!: support eslint 8 ([e98058f](https://github.com/sgtcoolguy/danger-plugin-eslint/commit/e98058f594faf2ccc1e887e704c2a8d9f30eca84))
+
+
+### BREAKING CHANGES
+
+* Drop support for versions older than eslint 8
+
 # [2.0.0](https://github.com/sgtcoolguy/danger-plugin-eslint/compare/v1.0.0...v2.0.0) (2020-07-14)
 
 
