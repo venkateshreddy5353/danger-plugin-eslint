@@ -6,7 +6,7 @@ export declare function warn(message: string): void
 export declare function fail(message: string): void
 export declare function markdown(message: string): void
 
-import { CLIEngine } from "eslint"
+import { ESLint } from "eslint"
 
 interface Options {
   baseConfig?: any
@@ -25,20 +25,25 @@ export default async function eslint(config: any, extensions: string[] = [".js"]
   if (extensions) {
     options.extensions = extensions
   }
-  const cli = new CLIEngine(options)
-  // let eslint filter down to non-ignored, matching the extensions expected
-  const filesToLint = allFiles.filter(f => {
-    return !cli.isPathIgnored(f) && options.extensions.some(ext => f.endsWith(ext))
-  })
+  const cli = new ESLint(options)
+
+  const filesToLint = []
+  for (const file of allFiles) {
+    if (await cli.isPathIgnored(file) && options.extensions.some(ext => file.endsWith(ext))) {
+      continue
+    }
+    filesToLint.push(file)
+  }
+
   return Promise.all(filesToLint.map(f => lintFile(cli, config, f)))
 }
 
 async function lintFile(linter, config, path) {
   const contents = await danger.github.utils.fileContents(path)
-  const report = linter.executeOnText(contents, path)
+  const results = await linter.lintText(contents, { filePath: path })
 
-  if (report.results.length !== 0) {
-    report.results[0].messages.map(msg => {
+  if (results.length !== 0) {
+    results[0].messages.map(msg => {
       if (msg.fatal) {
         fail(`Fatal error linting ${path} with eslint.`)
         return

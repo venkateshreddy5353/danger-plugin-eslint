@@ -48,7 +48,7 @@
     "cz-conventional-changelog": "^3.2.0",
     "danger": "^10.2.1",
     "esdoc": "^1.1.0",
-    "eslint": "^7.4.0",
+    "eslint": "^8.0.1",
     "husky": "^7.0.0",
     "jest": "^27.3.0",
     "lint-staged": "^11.0.0",
@@ -87,7 +87,7 @@
     ]
   },
   "peerDependencies": {
-    "eslint": "*"
+    "eslint": ">=8"
   },
   "husky": {
     "hooks": {
