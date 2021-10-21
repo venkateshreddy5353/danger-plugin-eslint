@@ -109,10 +109,10 @@ describe("eslint()", () => {
       github: {
         pr: { title: "Test" },
         utils: {
-          fileContents: mockFileContents(`
+          fileContents: jest.fn().mockResolvedValue(`
           var foo = 1 + 1;
           console.log(foo);
-        `),
+        `)
         },
       },
       git: { created_files: ["foo.json"], modified_files: [] },
@@ -121,6 +121,7 @@ describe("eslint()", () => {
     await eslint(defaultConfig)
 
     expect(global.fail).not.toHaveBeenCalled()
+    expect(global.danger.github.utils.fileContents).not.toHaveBeenCalled()
   })
 
   it("optionally override extensions to lint", async () => {
@@ -163,4 +164,5 @@ describe("eslint()", () => {
 
     expect(global.fail).not.toHaveBeenCalled()
   })
+
 })

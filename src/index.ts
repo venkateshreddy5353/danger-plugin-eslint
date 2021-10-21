@@ -29,7 +29,7 @@ export default async function eslint(config: any, extensions: string[] = [".js"]
 
   const filesToLint = []
   for (const file of allFiles) {
-    if (await cli.isPathIgnored(file) && options.extensions.some(ext => file.endsWith(ext))) {
+    if (await cli.isPathIgnored(file) || !options.extensions.some(ext => file.endsWith(ext))) {
       continue
     }
     filesToLint.push(file)
