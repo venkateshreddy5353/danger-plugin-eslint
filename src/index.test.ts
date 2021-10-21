@@ -112,7 +112,7 @@ describe("eslint()", () => {
           fileContents: jest.fn().mockResolvedValue(`
           var foo = 1 + 1;
           console.log(foo);
-        `)
+        `),
         },
       },
       git: { created_files: ["foo.json"], modified_files: [] },
