@@ -1,3 +1,10 @@
+## [3.0.1](https://github.com/sgtcoolguy/danger-plugin-eslint/compare/v3.0.0...v3.0.1) (2021-10-21)
+
+
+### Bug Fixes
+
+* correct filtering out files that dont match suggested extensions ([dd32cb0](https://github.com/sgtcoolguy/danger-plugin-eslint/commit/dd32cb0118e92630af4926a03b0e305190268d46))
+
 # [3.0.0](https://github.com/sgtcoolguy/danger-plugin-eslint/compare/v2.0.0...v3.0.0) (2021-10-18)
 
 
