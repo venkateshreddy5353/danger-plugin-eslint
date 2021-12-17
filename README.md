@@ -11,14 +11,14 @@
 Install:
 
 ```sh
-yarn add danger-plugin-eslint --dev
+yarn add @seadub/danger-plugin-eslint --dev
 ```
 
 At a glance:
 
 ```js
 // dangerfile.js
-import eslint from 'danger-plugin-eslint'
+import eslint from '@seadub/danger-plugin-eslint'
 
 eslint()
 ```
