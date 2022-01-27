@@ -6,7 +6,9 @@
         "allowJs": false,
         "pretty": true,
         "esModuleInterop": true,
-        "moduleResolution": "node"
+        "moduleResolution": "node",
+        "declaration": true,
+        "declarationDir": "./types"
     },
     "lib":["es2017"],
     "include": [
