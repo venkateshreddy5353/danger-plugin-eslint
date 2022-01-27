@@ -1,3 +1,10 @@
+## [3.0.2](https://github.com/sgtcoolguy/danger-plugin-eslint/compare/v3.0.1...v3.0.2) (2022-01-27)
+
+
+### Bug Fixes
+
+* generate types during typescript build ([#160](https://github.com/sgtcoolguy/danger-plugin-eslint/issues/160)) ([e4a373d](https://github.com/sgtcoolguy/danger-plugin-eslint/commit/e4a373d95db4133f454509eb7a9442d6b4fd2f79))
+
 ## [3.0.1](https://github.com/sgtcoolguy/danger-plugin-eslint/compare/v3.0.0...v3.0.1) (2021-10-21)
 
 
