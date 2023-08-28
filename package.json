@@ -1,24 +1,24 @@
 {
-  "name": "@seadub/danger-plugin-eslint",
+  "name": "@venkatesh/danger-plugin-eslint",
   "description": "Eslint your code with Danger",
   "author": {
-    "name": "Chris Williams",
-    "email": "chris.a.williams@gmail.com"
+    "name": "Venkatesh Reddy",
+    "email": "venkatesh.reddy5353@gmail.com"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/sgtcoolguy/danger-plugin-eslint.git"
+    "url": "https://github.com/venkateshreddy5353/danger-plugin-eslint.git"
   },
   "bugs": {
-    "url": "https://github.com/sgtcoolguy/danger-plugin-eslint/issues"
+    "url": "https://github.com/venkateshreddy5353/danger-plugin-eslint/issues"
   },
-  "homepage": "https://github.com/sgtcoolguy/danger-plugin-eslint#readme",
+  "homepage": "https://github.com/venkateshreddy5353/danger-plugin-eslint#readme",
   "keywords": [
     "danger",
     "danger-plugin",
     "eslint"
   ],
-  "version": "3.0.2",
+  "version": "1.0.0",
   "main": "dist/index.js",
   "types": "types/index.d.ts",
   "scripts": {
