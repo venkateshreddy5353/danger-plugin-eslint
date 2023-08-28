@@ -39,7 +39,7 @@ export default async function eslint(config: any, extensions: string[] = [".js"]
 }
 
 async function lintFile(linter, config, path) {
-  const contents = await danger.github.utils.fileContents(path)
+  const contents = await danger.gitlab.utils.fileContents(path)
   const results = await linter.lintText(contents, { filePath: path })
 
   if (results.length !== 0) {
