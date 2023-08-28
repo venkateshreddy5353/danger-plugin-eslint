@@ -31,7 +31,7 @@ describe("eslint()", () => {
 
   it("does not lint anything when no files in PR", async () => {
     global.danger = {
-      github: { pr: { title: "Test" } },
+      gitlab: { mr: { title: "Test" } },
       git: { created_files: [], modified_files: [] },
     }
 
@@ -42,8 +42,8 @@ describe("eslint()", () => {
 
   it("does not fail when a valid file is in PR", async () => {
     global.danger = {
-      github: {
-        pr: { title: "Test" },
+      gitlab: {
+        mr: { title: "Test" },
         utils: { fileContents: mockFileContents(`1 + 1;`) },
       },
       git: { created_files: ["foo.js"], modified_files: [] },
@@ -56,8 +56,8 @@ describe("eslint()", () => {
 
   it("calls fail for each eslint violation", async () => {
     global.danger = {
-      github: {
-        pr: { title: "Test" },
+      gitlab: {
+        mr: { title: "Test" },
         utils: {
           fileContents: mockFileContents(
             `
@@ -83,8 +83,8 @@ describe("eslint()", () => {
 
   it("uses the provided eslint config", async () => {
     global.danger = {
-      github: {
-        pr: { title: "Test" },
+      gitlab: {
+        mr: { title: "Test" },
         utils: {
           fileContents: mockFileContents(`
           var foo = 1 + 1;
@@ -106,8 +106,8 @@ describe("eslint()", () => {
 
   it("ignores files typically ignored by options/config", async () => {
     global.danger = {
-      github: {
-        pr: { title: "Test" },
+      gitlab: {
+        mr: { title: "Test" },
         utils: {
           fileContents: jest.fn().mockResolvedValue(`
           var foo = 1 + 1;
@@ -121,13 +121,13 @@ describe("eslint()", () => {
     await eslint(defaultConfig)
 
     expect(global.fail).not.toHaveBeenCalled()
-    expect(global.danger.github.utils.fileContents).not.toHaveBeenCalled()
+    expect(global.danger.gitlab.utils.fileContents).not.toHaveBeenCalled()
   })
 
   it("optionally override extensions to lint", async () => {
     global.danger = {
-      github: {
-        pr: { title: "Test" },
+      gitlab: {
+        mr: { title: "Test" },
         utils: {
           fileContents: mockFileContents(
             `
@@ -156,7 +156,7 @@ describe("eslint()", () => {
 
   it("should convert a eslint config passed in as a string to an object", async () => {
     global.danger = {
-      github: { pr: { title: "Test" } },
+      gitlab: { mr: { title: "Test" } },
       git: { created_files: [], modified_files: [] },
     }
 
