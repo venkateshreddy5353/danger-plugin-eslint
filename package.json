@@ -12,6 +12,9 @@
   "bugs": {
     "url": "https://github.com/venkateshreddy5353/danger-plugin-eslint/issues"
   },
+  "publishConfig": {
+    "@venkateshreddy5353:registry": "https://npm.pkg.github.com"
+  },
   "homepage": "https://github.com/venkateshreddy5353/danger-plugin-eslint#readme",
   "keywords": [
     "danger",
