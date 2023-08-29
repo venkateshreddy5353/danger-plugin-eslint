@@ -1,5 +1,5 @@
 {
-  "name": "@venkatesh/danger-plugin-eslint",
+  "name": "@venkateshreddy5353/danger-plugin-eslint",
   "description": "Eslint your code with Danger",
   "author": {
     "name": "Venkatesh Reddy",
